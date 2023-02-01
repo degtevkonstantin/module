@@ -3,17 +3,23 @@
 
 
 
-function calc (a, b, x){
+const calc = (a, b, x) => {
     if (x == '+'){
+
         return a + b
     } else if (x == '-'){
+
         return a - b
     } else if (x == '*'){
+
         return a * b
     } else if (x == '/'){
+
         return a / b
     } else if (x == '**'){
+
         return a ** b
-    }}
+    }};
+    
     console.log(calc(3, 4, '*'))
     
