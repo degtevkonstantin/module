@@ -8,32 +8,47 @@
 
 // Output: { min: 16, max: 24 }
 
-const arr =  [{ name: 'Ivan', age: 24 },
-    { name: 'Igor', age: 23},
-   { name: 'Oleg', age: 16}
-  ]
-  const  initialValue = arr[0]
-let max = arr[0].age;
-let min = arr[0].age;
-const newArr = arr.reduce((accumulator,currentValue) => {
-  console.log(accumulator.age)
-  console.log(currentValue.age)
-  if (accumulator.age <= currentValue.age >= max ){
-    console.log(currentValue.age)
+const arr =  [
+    { 
+      name: 'Ivan', 
+      age: 24 
+    },
+    { 
+      name: 'Igor', 
+      age: 23
+    },
+    {
+      name: 'Oleg', 
+      age: 16
+    }
+  ];
 
-    max = currentValue.age
+const seatch = (array) => {
+  const  initialValue = array[0]
+  let max = array[0].age;
 
-     }
-if(accumulator.age > currentValue.age < min){
-      min = currentValue.age
-     }
-     return{
+  let min = array[0].age;
+  
+  const resultArr = array.reduce((accumulator,currentValue) => {
+    if (accumulator.age <= currentValue.age >= max ){
+      max = currentValue.age;
+    };
+
+    if (accumulator.age > currentValue.age < min) {
+      min = currentValue.age;
+    };
+
+    return {
       age: currentValue.age,
       Max: max,
       Min: min
-     }
+    };
+  }, initialValue);
 
+  return {
+    Min: resultArr.Min,
+    Max: resultArr.Max
+  };
+};
 
-}, initialValue)
-
-console.log(newArr)
+console.log(seatch(arr));
