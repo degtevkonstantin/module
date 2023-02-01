@@ -5,13 +5,28 @@
 //  { name: “Oleg”, age: 16}, 
 // { name: “Igor”, age: 24}]
 
-arr = [{ name: 'Ivan', age: 24 },
-     { name: 'Oleg', age: 16},
-      { name: 'Igor', age: 24}];
+arr = [
+      { 
+            name: 'Ivan', 
+            age: 24 
+      },
+     {
+            name: 'Oleg', 
+            age: 16
+      },
+      { 
+            name: 'Igor', 
+            age: 24
+      }
+];
 
+const sumAge = (array) =>{
+      let result = array.reduce(function(accumulator, currentValue) {
 
-let result = arr.reduce(function(accumulator, currentValue) {
-	return accumulator + currentValue.age
-},0)
+	      return accumulator + currentValue.age;
+      },0);
 
-console.log(result)
+      return result;
+};
+
+console.log(sumAge(arr));
