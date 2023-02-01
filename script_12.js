@@ -21,12 +21,14 @@ const creatTable = () => {
   resultArray[0] = array[0].map((element) => {
     element = counter;
     counter = counter + 1;
-    return element
-  })
 
-  resultArray[0][0] = 'готово'
+    return element;
+  });
+
+  resultArray[0][0] = 'готово';
   
   return resultArray;
 };
+
 console.table(creatTable());
 
