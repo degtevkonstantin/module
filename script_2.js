@@ -6,8 +6,16 @@
 
 // Output: [14, 23, 13, 7, 3]
 
-const arr = [14, 53, 23, 53, 13, 55, 7, 34, 3, 6];
+let arr = [14, 53, 23, 53, 13, 55, 7, 34, 3, 6];
+const filtIndex = (array) => {
+    newArr = array.filter((element, index) => {
+        condition = index % 2;
+        condition = Boolean(boolean)
 
-const newArr = arr.filter((element, index) => index % 2 === 0)
+        return !condition
+        });
 
-console.log(newArr)
+    return newArr;
+};
+
+console.log(filtIndex(arr))
