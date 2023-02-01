@@ -17,19 +17,26 @@
 // Это число
 
 
-let arr = ['str', 123, '123', true, null, {}, 2]
-newArr = arr.map((x) => {
-if (typeof x === 'String'){
-    return 'это строка'
-} else if (typeof x === typeof 'Number') {
-    console.log('это число')
-    return 'это число'
-}else if(typeof x === typeof 'Boolean'){
-    console.log('это булево значение')
-    return 'это булево значение'
-} else {
-    console.log('Неизвестное значение')
-    return 'Неизвестное значение'
-}
-})
-console.log(newArr)
+const arr = ['str', 123, '123', true, null, {}, 2];
+
+const filtType = (array) => {
+    filtTypeArr = array.map((element) => {
+        if (typeof element === 'string') {
+
+            return 'это строка';
+        } else if (typeof element === typeof Number(element)) {
+
+            return 'это число';
+        } else if (typeof element === typeof Boolean(element)) {
+
+            return 'это булево значение';
+        } else {
+
+            return 'Неизвестное значение';
+        };
+    });
+
+    return filtTypeArr;
+};
+
+console.log(filtType(arr));
