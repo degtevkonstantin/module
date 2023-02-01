@@ -1,10 +1,14 @@
 // Написать функцию, принимающую массив строк и выводящих их на экран, используя цикл while.
 // Элементы из массива извлекать с помощью оператора .pop()
 
-let arr = ['1', '2', '3', '4', '5']
+const arr = ['1', '2', '3', '4', '5'];
 
-while (arr.length > 0){
-    let a = arr.pop();
+const outputNumber = (array) => {
+    while (array.length > 0) {
+        let number = array.pop();
+        
+        alert(number);
+    };
+};
 
-    console.log(a)
-}
+outputNumber(arr);
