@@ -9,14 +9,29 @@
 // Igor
 
 
-let arr = [{ name: 'Ivan', age: 24 },
-{ name: 'Oleg', age: 16},
-{ name: 'Igor', age: 24}]
+let arr = [
+    {
+         name: 'Ivan', 
+         age: 24 
+    },
+    { 
+        name: 'Oleg',
+        age: 16},
+    { 
+        name: 'Igor', 
+        age: 24
+    }
+]
 
-let newArr = arr.filter ((x) => x.age > 18)
+const filterArray = (array) => {
+    const filtArr = array.filter ((element,) => element.age > 18);
+    const resultArr = filtArr.map((element,) => {
+        alert(element.name);
 
-arr = newArr.map((x,) => {
-    return x.name
-})
+        return element.name;
+    });
 
-console.log(arr)
+    return resultArr;
+};
+
+console.log(filterArray(arr));
