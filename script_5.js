@@ -12,15 +12,39 @@
 // { p: 15 },
 // { p: 7 }]
 
-let arr = [{a: 5, b: 3, c: 4},
-    {a: 1, b: 3, c: 4},
-    {a: 4, b: 7, c: 4},
-    {a: 2, b: 2, c: 3}]
+const arr = [
+  {
+    a: 5, 
+    b: 3,
+    c: 4
+  },
+  {
+    a: 1, 
+    b: 3, 
+    c: 4
+  },
+  {
+    a: 4, 
+    b: 7, 
+    c: 4
+  },
+  {
+    a: 2, 
+    b: 2, 
+    c: 3
+  }
+];
 
-const newArr = arr.map((x,) => {
-    return{
-        p: x.a + x.b + x.c
-    }
-})
+const calc = (array) => {
+  const arrResult = array.map((element,) => {
 
-console.log(newArr);
+      return {
+          p: element.a + element.b + element.c
+      };
+
+  });
+
+  return arrResult;
+};
+
+console.log(calc(arr))
