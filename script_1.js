@@ -29,11 +29,14 @@ const arr = [
 
 const calctotal = (array) => {
     const resultArray = array.map((elem) => {
+
         return {
             name: elem.name,
             total: elem.price * elem.amount
         };
     });
+
     return resultArray;
 };
+
 console.log(calctotal(arr));
