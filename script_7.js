@@ -9,15 +9,18 @@
 
 
 const arr = [5,10, 15, 20, 10, 25, 20, 30, 15];
-let N = 55;
-function calc (N){
-return result = arr.reduce(function(sum, elem) {
-	if (sum <= N) {
-		return sum + elem;
-	} else {
-		return sum;
-	}
-});
-}
-calc(N)
-console.log(result)
+
+function calc (number){
+
+	return result = arr.reduce(function(sum, element) {
+		if (sum <= number) {
+
+			return sum + element;
+		} else {
+
+			return sum;
+		};
+	});
+};
+
+console.log(calc(55))
