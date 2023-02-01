@@ -14,22 +14,42 @@
 // { from: ‘Oleg’, to: ‘Igor’, amount: 1500, diff: -500}]
 
 
-const arr = [{ from: 'Ivan', to: 'Oleg', amount: 2500},
-     { from: 'Ivan', to: 'Igor', amount: 2000},
-     { from: 'Oleg', to: 'Igor', amount: 1500}]
-
-let sumAmout = arr.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.amount
-},0)
-let medium = sumAmout / arr.length
-
-let result = arr.map((x)=>{
-    return{
-        from: x.from,
-        to: x.to,
-        amount: x.amount,
-        diff: Math.abs (medium - x.amount)
+const arr = [
+    {
+        from: 'Ivan',
+        to: 'Oleg',
+        amount: 2500
+    },
+    {
+        from: 'Ivan',
+        to: 'Igor',
+        amount: 2000
+    },
+    {
+        from: 'Oleg',
+        to: 'Igor',
+        amount: 1500
     }
-})
+];
 
-console.log(result)
+const calc = (array) => {
+    let sumAmout = array.reduce((accumulator, currentValue) => {
+
+        return accumulator + currentValue.amount;
+    }, 0);
+    let medium = sumAmout / array.length
+
+    let result = array.map((element) => {
+
+        return {
+            from: element.from,
+            to: element.to,
+            amount: element.amount,
+            diff: Math.abs(medium - element.amount)
+        };
+    });
+
+    return result;
+}
+
+console.log(calc(arr));
