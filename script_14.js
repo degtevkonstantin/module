@@ -3,23 +3,24 @@
 
 
 
-const calc = (a, b, x) => {
-    if (x == '+'){
+const culator = (a, b, x) => {
+  if (x == '+'){
 
-        return a + b
-    } else if (x == '-'){
+  return a + b
+  } else if (x == '-'){
 
-        return a - b
-    } else if (x == '*'){
+    return a - b
+  } else if (x == '*'){
 
-        return a * b
-    } else if (x == '/'){
+    return a * b
+  } else if (x == '/'){
 
-        return a / b
-    } else if (x == '**'){
+    return a / b
+  } else if (x == '**'){
 
-        return a ** b
-    }};
+    return a ** b
+  }
+};
     
-    console.log(calc(3, 4, '*'))
+console.log(culator(3, 4, '*'))
     
