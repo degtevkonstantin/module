@@ -4,11 +4,11 @@
 const arr = ['1', '2', '3', '4', '5'];
 
 const outputNumber = (array) => {
-    while (array.length > 0) {
-        let number = array.pop();
-        
-        alert(number);
-    };
+  while (array.length > 0) {
+    let number = array.pop();
+    alert(number);
+  };
+  
 };
 
 outputNumber(arr);
