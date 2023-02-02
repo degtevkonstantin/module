@@ -9,28 +9,26 @@
 // Output: { min: 16, max: 24 }
 
 const arr =  [
-    { 
-      name: 'Ivan', 
-      age: 24 
-    },
-    { 
-      name: 'Igor', 
-      age: 23
-    },
-    {
-      name: 'Oleg', 
-      age: 16
-    }
-  ];
+  { 
+    name: 'Ivan', 
+    age: 24 
+  },
+  { 
+    name: 'Igor', 
+    age: 23
+  },
+  {
+    name: 'Oleg', 
+    age: 16
+  }
+];
 
-const seatch = (array) => {
+const seatchMaxMin = (array) => {
   const  initialValue = array[0]
   let max = array[0].age;
-
   let min = array[0].age;
-  
   const resultArr = array.reduce((accumulator,currentValue) => {
-    if (accumulator.age <= currentValue.age >= max ){
+    if (accumulator.age <= currentValue.age >= max ) {
       max = currentValue.age;
     };
 
@@ -51,4 +49,4 @@ const seatch = (array) => {
   };
 };
 
-console.log(seatch(arr));
+console.log(seatchMaxMin(arr));
