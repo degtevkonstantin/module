@@ -8,7 +8,7 @@
 
 let fio = 'Иванов Пётр Андреевич'
 
-const formString = (string) => {
+const FormattingToObject = (string) => {
   arrayFio = string.split(' ');
   Result = {
     first_name: arrayFio[1],
@@ -19,4 +19,4 @@ const formString = (string) => {
   return Result;
 };
 
-console.log(formString(fio));
+console.log(FormattingToObject(fio));
