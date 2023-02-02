@@ -10,7 +10,7 @@
 
 let mail = 'ivanov.oleg@pochta.com'
 
-const formString = (string) => {
+const FormattingToObject = (string) => {
   arrayMailUser = string.split('@');
   Result = {
     username: arrayMailUser[0],
@@ -20,4 +20,4 @@ const formString = (string) => {
   return Result;
 };
 
-console.log(formString(mail));
+console.log(FormattingToObject(mail));
