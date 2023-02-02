@@ -35,16 +35,16 @@ const arr = [
   }
 ];
 
-const calc = (array) => {
-  const arrResult = array.map((element,) => {
+const calcPerimetr = (array) => {
+  const arrResultCalc = array.map((element,) => {
 
-      return {
-          p: element.a + element.b + element.c
-      };
+    return {
+      p: element.a + element.b + element.c
+    };
 
   });
 
-  return arrResult;
+  return arrResultCalc;
 };
 
-console.log(calc(arr))
+console.log(calcPerimetr(arr));
