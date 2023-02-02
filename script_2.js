@@ -9,14 +9,13 @@
 const arr = [14, 53, 23, 53, 13, 55, 7, 34, 3, 6];
 
 const filtIndex = (array) => {
-    newArr = array.filter((element, index) => {
-        condition = index % 2;
-        condition = Boolean(boolean)
+    let resultArray = [];
 
-        return !condition;
-        });
+    for (i = 0; i < array.length; i += 2) {
+        resultArray.push(array[i]);
+    };
 
-    return newArr;
+    return resultArray;
 };
 
 console.log(filtIndex(arr))
