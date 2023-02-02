@@ -10,11 +10,11 @@
 
 let arr = [1, 2, 3, 4];
 
-const filt =  (array) => {
+const filtMultiplicationBy2 =  (array) => {
   newArr = array.filter((x) => x % 2 == 0);
   array = newArr.map((x) => x*2);
 
   return array;
 }
 
-console.log(filt(arr));
+console.log(filtMultiplicationBy2(arr));
