@@ -20,23 +20,23 @@
 const arr = ['str', 123, '123', true, null, {}, 2];
 
 const filtType = (array) => {
-    filtTypeArr = array.map((element) => {
-        if (typeof element === 'string') {
+  filtTypeArr = array.map((element) => {
+    if (typeof element === 'string') {
 
-            return 'это строка';
-        } else if (typeof element === typeof Number(element)) {
+      return 'это строка';
+    } else if (typeof element === typeof Number(element)) {
 
-            return 'это число';
-        } else if (typeof element === typeof Boolean(element)) {
+      return 'это число';
+    } else if (typeof element === typeof Boolean(element)) {
 
-            return 'это булево значение';
-        } else {
+      return 'это булево значение';
+    } else {
 
-            return 'Неизвестное значение';
-        };
-    });
+      return 'Неизвестное значение';
+    };
+  });
 
-    return filtTypeArr;
+  return filtTypeArr;
 };
 
 console.log(filtType(arr));
