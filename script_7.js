@@ -10,17 +10,17 @@
 
 const arr = [5,10, 15, 20, 10, 25, 20, 30, 15];
 
-function calc (number){
+const calcSumElements = (number) => {
 
-	return result = arr.reduce(function(sum, element) {
-		if (sum <= number) {
+  return result = arr.reduce((sum, element) => {
+    if (sum <= number) {
 
-			return sum + element;
-		} else {
+      return sum + element;
+    } else {
 
-			return sum;
-		};
-	});
+      return sum;
+    };
+  });
 };
 
-console.log(calc(55))
+console.log(calcSumElements(55))
