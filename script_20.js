@@ -14,24 +14,23 @@
 
 const href = 'https://www.google.com/doodles/rubiks-cube'
 
-const urlInfo = (url) =>{
+const urlInfoByObject = (url) => {
   url = new URL (url)
   arrayChilds = url.pathname.split('/');
   arrayChilds.shift()
-  childObject = {
+  child = {
     child: {
       path: arrayChilds[0],
-      child: {
-        path: arrayChilds[1]
-      }
+      child: arrayChilds[1]
+      
     }
   }
 
   return{
     protocol: url.protocol,
     hostname: url.hostname,
-    childObject
+    child
   }
 }
 
-console.log(urlInfo(href))
+console.log(urlInfoByObject(href))
