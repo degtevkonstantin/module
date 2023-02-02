@@ -4,25 +4,23 @@
 // предыдущих чисел (пример, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233).
 
 
-const createarr = (number) => {
-    let array = [];
+const createCaseFibonacciNumbers = (number) => {
+  let array = [];
     
-    if (number == 1){
-        array.push(0);
-    } else if(number >= 2){
+  if (number == 1){
+    array.push(0);
+  } else if(number >= 2){
     array.push(0, 1);
-    } else {
-        alert('Заданно не известное значение или 0');
-    };
+  } else {
+    alert('Заданно не известное значение или 0');
+  };
+  while (array.length < number && 2 < number) {
+    let index1 = array.length - 1, index2 = array.length - 2
+    let arrNum = array[index1] + array[index2]
+    array.push(arrNum)
+  };
 
-    while (array.length < number && 2 < number) {
-        let index1 = array.length - 1, index2 = array.length - 2
-        let arrNum = array[index1] + array[index2]
-        array.push(arrNum)
-    };
-
-    return array;
-    
+  return array;  
 };
 
 console.log(createarr(5));
