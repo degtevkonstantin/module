@@ -1,7 +1,7 @@
 // Заполнить двумерный массив таблицей квадратов целых чисел от 0 до 100 и 
 // вывести её в удобочитаемом виде.  
 
-const creatTable = () => {
+const creatTableSquare = () => {
   let array = Array(11);
 
   for (let counter = 0; counter < 11; counter++) {
@@ -30,5 +30,5 @@ const creatTable = () => {
   return resultArray;
 };
 
-console.table(creatTable());
+console.table(creatTableSquare());
 
