@@ -16,7 +16,8 @@ const calcElements = (array) => {
 
     return accumulator;
   }, {});
+
   return resultArr;
 };
 
-console.log(calcElements(arr))
+console.log(calcElements(arr));
