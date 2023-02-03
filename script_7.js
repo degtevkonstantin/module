@@ -11,16 +11,9 @@
 const arr = [5,10, 15, 20, 10, 25, 20, 30, 15];
 
 const calcSumElements = (number) => {
-
   return result = arr.reduce((sum, element) => {
-    if (sum <= number) {
-
-      return sum + element;
-    } else {
-
-      return sum;
-    };
+    return sum <= number ?  sum + element :  sum;
   });
 };
 
-console.log(calcSumElements(55))
+console.log(calcSumElements(60))
