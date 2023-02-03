@@ -10,19 +10,15 @@
 
 const arr = [13, 14, 32, 23, 34, 21, 44, 47, 86];
 
-const editArr = (array, start, end) => {
-  resultArray = array.filter((_,index) => {
-  if (end >= index && index >= start) {
-    
-    return true;
+const segmentArr = (array, start, end) => {
+  if (start >= 0 && end >= start) {
+    resultArray = array.filter((_, index) => {
+      end >= index && index >= start ? true : false;
+      return resultArray;
+    });
   } else {
-
-    return false;
+    return alert('заданны некоректные значения')
   }
-
-})
-
-  return resultArray;
 }
 
-console.log(editArr(arr,4,6));
+console.log(segmentArr(arr, 4, 6));
