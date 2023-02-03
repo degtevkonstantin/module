@@ -5,15 +5,7 @@
 
 
 const createCaseFibonacciNumbers = (number) => {
-  let array = [];
-    
-  if (number == 1){
-    array.push(0);
-  } else if(number >= 2){
-    array.push(0, 1);
-  } else {
-    alert('Заданно не известное значение или 0');
-  };
+  let array = [0, 1];
   while (array.length < number && 2 < number) {
     let index1 = array.length - 1, index2 = array.length - 2
     let arrNum = array[index1] + array[index2]
@@ -23,4 +15,4 @@ const createCaseFibonacciNumbers = (number) => {
   return array;  
 };
 
-console.log(createarr(5));
+console.log(createCaseFibonacciNumbers(5));
