@@ -8,16 +8,16 @@
 //  domain: “pochta.com”
 // }
 
-let mail = 'ivanov.oleg@pochta.com'
+const mail = 'ivanov.oleg@pochta.com';
 
-const FormattingToObject = (string) => {
+const formattingToObject = (string) => {
   arrayMailUser = string.split('@');
-  Result = {
+  const result = {
     username: arrayMailUser[0],
     ldomain: arrayMailUser[1],
   }
 
-  return Result;
+  return result;
 };
 
-console.log(FormattingToObject(mail));
+console.log(formattingToObject(mail));
