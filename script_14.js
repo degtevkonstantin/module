@@ -3,24 +3,15 @@
 
 
 
-const culator = (a, b, x) => {
-  if (x == '+'){
-
-  return a + b
-  } else if (x == '-'){
-
-    return a - b
-  } else if (x == '*'){
-
-    return a * b
-  } else if (x == '/'){
-
-    return a / b
-  } else if (x == '**'){
-
-    return a ** b
+const calculator = (firstNumber, secondNumber, operation) => {
+  switch (operation){
+    case '+': return firstNumber + secondNumber;
+    case '-': return firstNumber - secondNumber;
+    case '*': return firstNumber * secondNumber;
+    case '/': return firstNumber / secondNumber;
+    case '**': return firstNumber ** secondNumber;
   }
 };
     
-console.log(culator(3, 4, '*'))
+console.log(calculator(3, 4, '*'));
     
