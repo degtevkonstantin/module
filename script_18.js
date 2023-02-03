@@ -6,17 +6,17 @@
 
 // Output: { first_name: “Пётр”, last_name: “Иванов”, patronymic_name: “Андреевич”}
 
-let fio = 'Иванов Пётр Андреевич'
+const fio = 'Иванов Пётр Андреевич';
 
-const FormattingToObject = (string) => {
+const formattingToObject = (string) => {
   arrayFio = string.split(' ');
-  Result = {
+  const result = {
     first_name: arrayFio[1],
     last_name: arrayFio[0],
     patronymic_name: arrayFio[2] 
   }
 
-  return Result;
+  return result;
 };
 
-console.log(FormattingToObject(fio));
+console.log(formattingToObject(fio));
