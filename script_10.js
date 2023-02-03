@@ -32,24 +32,22 @@ const arr = [
   }
 ];
 
-const calc = (array) => {
-  let sumAmout = array.reduce((accumulator, currentValue) => {
-
-  return accumulator + currentValue.amount;
+const calcDiff = (array) => {
+  const sumAmout = array.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.amount;
   }, 0);
-  let medium = sumAmout / array.length
+  const medium = sumAmout / array.length
 
-  let result = array.map((element) => {
-
+  const result = array.map((element) => {
     return {
-        from: element.from,
-        to: element.to,
-        amount: element.amount,
-        diff: Math.abs(medium - element.amount)
+      from: element.from,
+      to: element.to,
+      amount: element.amount,
+      diff: Math.abs(medium - element.amount)
     };
   });
 
   return result;
 }
 
-console.log(calc(arr));
+console.log(calcDiff(arr));
