@@ -22,10 +22,9 @@ const arr = [
 
 const sumAge = (array) => {
   let result = array.reduce((accumulator, currentValue) => {
-
     return accumulator + currentValue.age;
   }, 0);
-
+  
   return result;
 };
 
