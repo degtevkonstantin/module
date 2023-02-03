@@ -1,3 +1,5 @@
+// В функцию подается несколько массивов. Вернуть один массив со всеми элементами.
+
 const arr1 = [1, 2, 3, 4,];
 const arr2 = ['1', '2', '3', '4'];
 const arr3 = [
@@ -9,7 +11,7 @@ const arr3 = [
   }
 ];
 
-const calc = (...arrays) => {
+const uniteArrays = (...arrays) => {
   let uniteArr = [];
 
   uniteArr = uniteArr.concat(...arrays);
@@ -17,4 +19,4 @@ const calc = (...arrays) => {
   return uniteArr;
 };
 
-console.log(calc(arr1, arr2, arr3))
+console.log(uniteArrays(arr1, arr2, arr3))
