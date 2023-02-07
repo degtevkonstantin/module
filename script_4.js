@@ -4,7 +4,7 @@
 // предыдущих чисел (пример, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233).
 
 
-const createCaseFibonacciNumbers = (number) => {
+const createArrayFibonacciNumbers = (number) => {
   let array = [0, 1];
   while (array.length < number && 2 < number) {
     let index1 = array.length - 1, index2 = array.length - 2
@@ -15,4 +15,4 @@ const createCaseFibonacciNumbers = (number) => {
   return array;  
 };
 
-console.log(createCaseFibonacciNumbers(5));
+console.log(createArrayFibonacciNumbers(5));
