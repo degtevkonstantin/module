@@ -10,7 +10,6 @@ const arr = [14, 53, 23, 53, 13, 55, 7, 34, 3, 6];
 
 const filterIndex = (array) => {
   let resultArray = [];
-  
   for (i = 0; i < array.length; i += 2) {
     resultArray.push(array[i]);
   };
