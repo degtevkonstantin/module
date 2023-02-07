@@ -8,13 +8,13 @@
 // 4
 // 8
 
-let arr = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
-const filtMultiplicationBy2 =  (array) => {
-  newArr = array.filter((x) => x % 2 == 0);
-  array = newArr.map((x) => x*2);
+const filterAndTransformation = (array, filter, transformation) => {
+  newArr = array.filter(filter);
+  array = newArr.map(transformation);
 
   return array;
 }
 
-console.log(filtMultiplicationBy2(arr));
+console.log(filterAndTransformation(arr,(el) => el %2 == 0, (el) => el * 2));
