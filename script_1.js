@@ -12,31 +12,32 @@
 // { name: “Tea”, total: 140 }]
 
 const arr = [ 
-    {
-        name: 'Milk', 
-        price: 20, 
-        amount: 15 
-    },{
-        name:'Coffee', 
-        price: 30, 
-        amount: 17 
-    },{
-        name:'Tea', 
-        price: 10, 
-        amount: 14 
-    }
+  {
+    name: 'Milk', 
+    price: 20, 
+    amount: 15 
+  },
+  {
+    name:'Coffee', 
+    price: 30, 
+    amount: 17 
+  },
+  {
+    name:'Tea', 
+    price: 10, 
+    amount: 14 
+  }
 ];
 
-const calctotal = (array) => {
-    const resultArray = array.map((elem) => {
+const calcTotalArray = (array) => {
+  const resultArray = array.map((elem) => {
+    return {
+      name: elem.name,
+      total: elem.price * elem.amount
+    };
+  });
 
-        return {
-            name: elem.name,
-            total: elem.price * elem.amount
-        };
-    });
-
-    return resultArray;
+  return resultArray;
 };
 
-console.log(calctotal(arr));
+console.log(calcTotalArray(arr));
