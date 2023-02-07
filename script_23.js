@@ -11,13 +11,14 @@
 const arr = [ 'aaa', 'bbb', 'ccc', 'aaa', 'bbb', '', 'aaa'];
 
 const calcElements = (array) => {
-  resultArr = array.reduce((accumulator, element) => {
+  resultObj = array.reduce((accumulator, element) => {
     accumulator[element] = (accumulator[element] || 0) + 1;
 
     return accumulator;
-  }, {});
-
-  return resultArr;
+    }, {});
+  delete resultObj[''];
+  
+  return resultObj;
 };
 
 console.log(calcElements(arr));
