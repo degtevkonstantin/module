@@ -37,13 +37,12 @@ const calcDiff = (array) => {
     return accumulator + currentValue.amount;
   }, 0);
   const medium = sumAmout / array.length
-
   const result = array.map((element) => {
     return {
       from: element.from,
       to: element.to,
       amount: element.amount,
-      diff: Math.abs(medium - element.amount)
+      diff: medium - element.amount
     };
   });
 
