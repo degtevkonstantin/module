@@ -37,7 +37,6 @@ const arr = [
 
 const calcPerimetrs = (array) => {
   const arrResultCalc = array.map((element,) => {
-
     return {
       p: element.a + element.b + element.c
     };
