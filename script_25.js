@@ -6,18 +6,19 @@
 
 // Output: findAndReplaceElementOfArray
 
-const FormCamelCase = (string) => {
-  arrString = string.split(['_']);
+const formCamelCase = (string) => {
+  let arrString = string.split(['_']);
   resultArr = arrString.map((element) => {
 
     return element[0].toUpperCase() + element.slice(1);
   });
+  resultArr[0] = arrString[0];
   resultString = resultArr.reduce((accumulator, currentValue) => {
 
-    return accumulator + ' ' + currentValue;
+    return accumulator + currentValue;
   });
 
   return resultString;
 };
 
-console.log(FormCamelCase('find_and_replace_element_of_array'));
+console.log(formCamelCase('find_and_replace_element_of_array'));
