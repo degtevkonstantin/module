@@ -46,7 +46,7 @@ const calcDiff = (array) => {
     };
   });
 
-  return result;
+  return {medium, result};
 }
 
 console.log(calcDiff(arr));
