@@ -18,12 +18,12 @@ const user = {
   last_name: 'Ivanov',
   password: 'Mypwd!23',
   age: 13
- }
+}
 
- const DelitePasswordUserData = (userData) => {
+const delitePasswordUserData = (userData) => {
   delete userData.password;
-  
-  return userData;
- }
 
- console.log(DelitePasswordUserData(user))
+  return userData;
+}
+
+console.log(delitePasswordUserData(user))
