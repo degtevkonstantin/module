@@ -5,11 +5,13 @@
 
 
 const createArrayFibonacciNumbers = (number) => {
-  let array = [0, 1];
+  const array = [0, 1];
+
   while (array.length < number && 2 < number) {
-    let index1 = array.length - 1, index2 = array.length - 2
-    let arrNum = array[index1] + array[index2]
-    array.push(arrNum)
+    let index1 = array.length - 1;
+    let index2 = array.length - 2;
+    let arrNum = array[index1] + array[index2];
+    array.push(arrNum);
   };
 
   return array;  
