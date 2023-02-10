@@ -11,12 +11,12 @@
 const arr = [ 'aaa', 'bbb', 'ccc', 'aaa', 'bbb', '', 'aaa'];
 
 const calcElements = (array) => {
-  resultObj = array.reduce((accumulator, element) => {
+  array = array.filter((element) => typeof (element) == 'string' && element !== '')
+  const resultObj = array.reduce((accumulator, element) => {
     accumulator[element] = (accumulator[element] || 0) + 1;
-
+    
     return accumulator;
     }, {});
-  delete resultObj[''];
   
   return resultObj;
 };
