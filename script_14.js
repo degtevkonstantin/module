@@ -4,14 +4,21 @@
 
 
 const calculator = (firstNumber, secondNumber, operation) => {
-  switch (operation){
-    case '+': return firstNumber + secondNumber;
-    case '-': return firstNumber - secondNumber;
-    case '*': return firstNumber * secondNumber;
-    case '/': return firstNumber / secondNumber;
-    case '**': return firstNumber ** secondNumber;
+  switch (operation) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    case '/':
+      return firstNumber / secondNumber;
+    case '**':
+      return firstNumber ** secondNumber;
+    default:
+      return 'Не корректная операция'
   }
 };
-    
+
 console.log(calculator(3, 4, '*'));
-    
+
