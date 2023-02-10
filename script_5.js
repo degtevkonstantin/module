@@ -36,13 +36,12 @@ const arr = [
 ];
 
 const calcPerimetrs = (array) => {
-  const arrResultCalc = array.map((element,) => {
+  const perimeters = array.map((element,) => {
     return {
-      p: element.a + element.b + element.c
+      p: element.a + element.b + element.c;
     };
   });
-
-  return arrResultCalc;
+  return perimeters;
 };
 
 console.log(calcPerimetrs(arr));
