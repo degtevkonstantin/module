@@ -11,7 +11,7 @@
 const mail = 'ivanov.oleg@pochta.com';
 
 const formattingToObject = (string) => {
-  arrayMailUser = string.split('@');
+  const arrayMailUser = string.split('@');
   const result = {
     username: arrayMailUser[0],
     ldomain: arrayMailUser[1],
