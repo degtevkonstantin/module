@@ -19,24 +19,24 @@
 
 const arr = ['str', 123, '123', true, null, {}, 2];
 
-const OutputType = (array) => {
-  filterTypeArr = array.map((element) => {
-    switch (typeof element){
-    case typeof 'string': 
-    return 'это строка';
+const outputType = (array) => {
+  const filterTypeArr = array.map((element) => {
+    switch (typeof element) {
+      case typeof 'string':
+        return 'это строка';
 
-      case typeof Number(element): 
-      return 'это число';
+      case typeof Number(element):
+        return 'это число';
 
       case typeof Boolean(element):
         return 'это булево значение';
 
       default:
-      return 'Неизвестное значение';
-  }
+        return 'Неизвестное значение';
+    }
   });
 
   return filterTypeArr;
 };
 
-console.log(OutputType(arr));
+console.log(outputType(arr));
