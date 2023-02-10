@@ -9,7 +9,7 @@
 const fio = 'Иванов Пётр Андреевич';
 
 const formattingToObject = (string) => {
-  arrayFio = string.split(' ');
+  const arrayFio = string.split(' ');
   const result = {
     first_name: arrayFio[1],
     last_name: arrayFio[0],
