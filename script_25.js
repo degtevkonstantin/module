@@ -7,8 +7,8 @@
 // Output: findAndReplaceElementOfArray
 
 const formCamelCase = (string) => {
-  let arrString = string.split(['_']);
-  resultArr = arrString.map((element) => {
+  const arrString = string.split(['_']);
+  let resultArr = arrString.map((element) => {
 
     return element[0].toUpperCase() + element.slice(1);
   });
