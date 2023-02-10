@@ -10,22 +10,24 @@
 // Output: [1, 2, 3, 4, 4, 5, 5]
 
 const sortArr = (array, action) => {
-  if (action == 'ASC'){
-
-    return array.sort();
-  } else if (action == 'DESC') {
-
+  switch (action) {
+    case 'ASC':
       return array.sort((a, b) => {
-        if (b > a){
-          return 1
-        } if (b < a) {
+        if (b > a) {
           return -1
-        }
+        } 
+      });
+    case 'DESC':
+      return array.sort((a, b) => {
+        if (b < a) {
+          return -1
+        } 
       })
-  } else if (action == 'NOT SORT') {
-
-    return array;
-  };
+    case 'NOT SORT':
+      return array;
+    default:
+      alert('Не корректное значение')
+  }
 };
 
-console.log(sortArr([-500, 4, 5, 2, 4, 1, 5, 3, -1, -400, 'b', 'c',], 'DESC'));
+console.log(sortArr([-500, 4, 5, 2, 4, 1, 5, 3, -1, -400, 'b', 'c',], 'ASC'));
