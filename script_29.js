@@ -19,15 +19,11 @@ const user = {
   age: 15
 }
 const editUserData = (userData) => {
-  const id = userData.id;
-  const first_name = userData.first_name;
-  const last_name = userData.last_name;
-  const password = userData.password;
-  const age = userData.age
+  const {id, first_name: firstName, last_name: lastName, password, age} = userData
 
   return {
-    last_name,
-    first_name
+    lastName,
+    firstName
   };
 };
 
