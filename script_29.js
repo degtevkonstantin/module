@@ -19,6 +19,12 @@ const user = {
   age: 15
 }
 
+const id = 0;
+const first_name = 0;
+const last_name = 0;
+const password = 0;
+const age = 0;
+
 const editUserData = (userData) => {
   const {id, first_name, last_name, password, age } = user;
 
