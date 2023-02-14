@@ -18,8 +18,9 @@ const user = {
   password: 'Mypwd!23',
   age: 15
 }
+
 const editUserData = (userData) => {
-  const {id, first_name: firstName, last_name: lastName, password, age} = userData
+  const {id, first_name: firstName, last_name: lastName, password, age} = userData;
 
   return {
     lastName,
